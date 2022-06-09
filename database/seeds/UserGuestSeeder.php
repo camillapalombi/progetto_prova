@@ -12,7 +12,7 @@
                 UserGuest::create([
                     'name'      =>  $faker->first_name(),
                     'surname'   =>  $faker->last_name(),
-                    'mail'      =>  $faker->email(),
+                    'mail'      =>  Hash::make('ciaociao'),
                     'username'  =>  $faker->userName(),
                     'password'  =>  $faker->password(),
                   ]);
