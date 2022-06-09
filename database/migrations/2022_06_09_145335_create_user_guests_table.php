@@ -14,7 +14,11 @@ class CreateUserGuestsTable extends Migration
     public function up()
     {
         Schema::create('user_guests', function (Blueprint $table) {
-            $table->id();
+            $table->id('user-guest_id');
+            $table->string('user-guest_name')->nullable();
+            $table->string('user-guest_surname')->nullable();
+            $table->string('user-guest_email')->unique();
+            $table->string('user-guest_password');
             $table->timestamps();
         });
     }
